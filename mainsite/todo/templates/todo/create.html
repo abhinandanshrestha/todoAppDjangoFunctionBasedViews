@@ -1,0 +1,16 @@
+{% extends 'todo/main.html' %}
+
+{% block content %}
+
+	<br>
+	<center>
+	<div class="container">
+		<h3>Create a task:</h3>
+		<form method="POST" action="{% url 'create' %}">
+			{{form.title}}
+			{% csrf_token %}
+			<input type="submit" name="create-task" class="btn btn-sm btn-danger">
+		</form>
+	</div>
+	</center>
+{% endblock %}

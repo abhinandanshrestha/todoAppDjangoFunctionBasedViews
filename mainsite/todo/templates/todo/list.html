@@ -1,0 +1,36 @@
+{% extends 'todo/main.html' %}
+
+
+{% block content %}
+
+
+	<br>
+	<center>
+	<div class="container">
+		<h3>Your Todos:</h3>
+		<div class="card" style="width: 30rem;">
+		  <ul class="list-group list-group-flush">
+		  	{% for task in tasks %}
+		  		{% if task.completed %}
+		    		<li class="list-group-item">
+		    			<strike>{{task}}</strike>
+				    	<a href="{% url 'update' task.id %}" class="btn btn-sm btn-danger">Update</a>
+						<a href="{% url 'delete' task.id %}" class="btn btn-sm btn-secondary">Delete</a>
+		    		</li>
+		    	{% else %}
+		    		<li class="list-group-item">
+		    			{{task}}
+				    	<a href="{% url 'update' task.id %}" class="btn btn-sm btn-danger">Update</a>
+						<a href="{% url 'delete' task.id %}" class="btn btn-sm btn-secondary">Delete</a>
+		    		</li>
+		    	{% endif %}
+		    {% endfor %}
+		  </ul>
+		</div>
+				<a href="{% url 'create' %}" class="btn btn-sm btn-danger" style="width: 30rem;">Create a to-do</a>
+	</div>
+
+
+</center>
+{% endblock %}
+

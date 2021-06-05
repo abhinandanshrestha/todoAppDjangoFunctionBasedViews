@@ -1,0 +1,16 @@
+{% extends 'todo/main.html' %}
+
+{% block content %}
+
+<div class="container">
+	<h2>Update</h2>
+
+	<form action="" method="POST">
+		<p>Title: {{form.title}}</p>
+		<p>Completed: {{form.completed}}</p>
+		{% csrf_token %}
+		<input type="submit" name="update-task" class="btn btn-danger">
+	</form>
+</div>
+
+{% endblock %}
