@@ -18,11 +18,24 @@ body{
      margin-right: 30px;
 }
 
+.navbar-custom{
+    background-color: rgb(43, 43, 48)!important;
+}
+
 .navbar-nav .nav-item.active .nav-link{
     color: white;
-    font-family: "Sofia", sans-serif;
+    font-family: "Quicksand", sans-serif;
+
 }
 
 .navbar-nav .nav-item:hover .nav-link {
     color: rgb(255, 59, 59);
+}
+
+.listtitle{
+    text-transform: uppercase!important;
+    background-color: rgb(43, 43, 48)!important;
+    color: whitesmoke;
+    font-weight: 900;
+    font-size: 20px;
 }
